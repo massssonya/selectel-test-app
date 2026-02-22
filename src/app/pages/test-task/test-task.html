@@ -1,0 +1,25 @@
+<section>
+  <app-header
+    [activeSectionName]="store.activeSection$()?.name"
+    [countSelectedItems]="store.selectedItems().size"
+    [totalValue]="store.totalValue()"
+  />
+  <div class="grid absolute">
+    <app-navigation
+		[sections]="store.sections$()"
+		[activeSectionId]="store.currentSectionId()"
+		(selectSection)="store.selectSection($event)"
+	/>
+    <div class="container">
+      <div class="grid-column">
+        @for(item of store.currentItems(); track item.id) {
+        <app-checkbox-item
+          [item]="item"
+          [checked]="store.isCheckedItem(item.id)"
+          (checkedChange)="store.toggleItem(item.id, $event.checked)"
+        />
+        }
+      </div>
+    </div>
+  </div>
+</section>

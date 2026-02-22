@@ -1,0 +1,24 @@
+.item {
+  background-color: var(--gray-100);
+  padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.item .item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item label {
+  display: inline-block;
+}
+
+.item input {
+  margin-right: 10px;
+}
+
+.item span {
+  display: block;
+}

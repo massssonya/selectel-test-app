@@ -1,0 +1,44 @@
+[
+	{
+		"id": "section1",
+		"name": "Раздел 1",
+		"items": [
+			{
+				"id": "item1",
+				"text": "item1",
+				"value": 20
+			},
+			{
+				"id": "item2",
+				"text": "item2",
+				"value": 10
+			},
+			{
+				"id": "item3",
+				"text": "item3",
+				"value": 30
+			}
+		]
+	},
+	{
+		"id": "section2",
+		"name": "Раздел 2",
+		"items": [
+			{
+				"id": "item4",
+				"text": "item4",
+				"value": 60
+			},
+			{
+				"id": "item5",
+				"text": "item5",
+				"value": 14
+			},
+			{
+				"id": "item6",
+				"text": "item6",
+				"value": 110
+			}
+		]
+	}
+]

@@ -1,0 +1,13 @@
+<nav class="navigation container">
+  <ul class="menu-container">
+    @for(section of sections; track section.id) {
+    <li>
+      <button
+	  	(click)="onSelect(section)"
+		[class.active]="activeSectionId === section.id">
+        {{ section.name }}
+      </button>
+    </li>
+    } @empty { Список пуст }
+  </ul>
+</nav>

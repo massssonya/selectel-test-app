@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--gray-200);
+    height: var(--header-height);
+    width: 100%;
+  }
+
+  section {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .menu-container {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu-item {
+  }
+
+  .menu-item span {
+    font-size: 1.2rem;
+    text-wrap: nowrap;
+  }
+
+  .basis {
+    flex-basis: 100%;
+  }
