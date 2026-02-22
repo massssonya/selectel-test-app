@@ -1,7 +1,9 @@
-<div class="item">
-  <input type="checkbox" [checked]="checked" (change)="onToggle($event)" [id]="item.id" />
-  <div class="item-container">
-    <label [for]="item.id">{{ item.text }}</label>
-    <span>Value: {{ item.value }}</span>
-  </div>
-</div>
+<label class="item-container">
+    <input
+      type="checkbox"
+      [checked]="checked"
+      (change)="onToggle($event)"
+    />
+    <span class="item-text">{{ item.text }}</span>
+    <small class="item-value">Value: {{ item.value }}</small>
+  </label>

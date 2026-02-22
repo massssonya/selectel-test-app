@@ -1,24 +1,15 @@
-.item {
-  background-color: var(--gray-100);
-  padding: 10px;
-  display: flex;
-  justify-content: start;
-}
-
-.item .item-container {
-  display: flex;
-  flex-direction: column;
+.item-container {
+  display: inline;
   gap: 10px;
 }
 
-.item label {
-  display: inline-block;
+.item-text {
+  display: inline;
+  margin-left: 10px;
 }
 
-.item input {
-  margin-right: 10px;
-}
-
-.item span {
+.item-value {
   display: block;
+  margin-top: 10px;
+  margin-left: 20px;
 }

@@ -1,25 +1,32 @@
-<section>
+<section aria-labelledby="items-section-title">
   <app-header
+    id="items-section-title"
     [activeSectionName]="store.activeSection$()?.name"
     [countSelectedItems]="store.selectedItems().size"
     [totalValue]="store.totalValue()"
   />
-  <div class="grid absolute">
-    <app-navigation
-		[sections]="store.sections$()"
-		[activeSectionId]="store.currentSectionId()"
-		(selectSection)="store.selectSection($event)"
-	/>
-    <div class="container">
-      <div class="grid-column">
-        @for(item of store.currentItems(); track item.id) {
-        <app-checkbox-item
-          [item]="item"
-          [checked]="store.isCheckedItem(item.id)"
-          (checkedChange)="store.toggleItem(item.id, $event.checked)"
-        />
+
+  <div class="layout-grid">
+    <aside>
+      <app-navigation
+        [sections]="store.sections$()"
+        [activeSectionId]="store.currentSectionId()"
+        (selectSection)="store.selectSection($event)"
+      />
+    </aside>
+
+    <div role="region" class="content">
+      <ul class="grid-column">
+        @for (item of store.currentItems(); track item.id) {
+        <li>
+          <app-checkbox-item
+            [item]="item"
+            [checked]="store.isCheckedItem(item.id)"
+            (checkedChange)="store.toggleItem(item.id, $event.checked)"
+          />
+        </li>
         }
-      </div>
+      </ul>
     </div>
   </div>
 </section>

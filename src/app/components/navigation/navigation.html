@@ -1,10 +1,8 @@
-<nav class="navigation container">
+<nav aria-label="Sections" class="navigation container">
   <ul class="menu-container">
     @for(section of sections; track section.id) {
     <li>
-      <button
-	  	(click)="onSelect(section)"
-		[class.active]="activeSectionId === section.id">
+      <button (click)="onSelect(section)" [class.active]="activeSectionId === section.id">
         {{ section.name }}
       </button>
     </li>
