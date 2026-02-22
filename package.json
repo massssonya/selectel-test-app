@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:github": "ng build --configuration github",
+    "build:prod": "ng build --configuration production",
+	"deploy:github": "npm run build:github && npx angular-cli-ghpages --dir=dist/selectel-test-app/browser"
   },
   "prettier": {
     "printWidth": 100,
